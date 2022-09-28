@@ -71,7 +71,7 @@
     "proof-r0": "This resume is a proof of work based on <a href=\"https://startbootstrap.com/theme/resume\">this theme</a>. Some pure Javascript functions hide my phone number and email address to robots (a weak protection, but they have to run javascript to find them).",
     "proof-r1": "A basical VueJS script switches from english to italian languages (using a not canonical gettext plugin).",
     "proof-r2": "All icons are from the Fontawesome free library, flags included. My photo is not cropped but I pan it using CSS.",
-    "proof-r3": "Finally, I have used NodeJS to assemble third parties libraries. But github.io supports static pages only, so I have staticize all using <a href=\"https://github.com/brewingcode/pug-pack\">pug-pack</a>. You don't have to look for NodeJS in my skill, I have never used it before."
+    "proof-r3": "Finally, I wrote a <a href=\"https://github.com/alienhunter3010/alienhunter3010.nodejs\">NodeJS project</a> to assemble third parties libraries. But github.io supports static pages only, so I have staticize all using <a href=\"https://github.com/brewingcode/pug-pack\">pug-pack</a>. You don't have to look for NodeJS in my skill, I have never used it before."
   },
   "it_IT": {
     "About": "Chi sono",
@@ -145,6 +145,6 @@
     "proof-r0": "Questa pagina è una prova d'autore, basata su <a href=\"https://startbootstrap.com/theme/resume\">questo tema</a>. Alcune funzioni <i>Javascript pure<\/i> nascondono il mio numero di telefono e il mio indirizzo email ai robot (una protezione debole, per trovarli però devono processare il codice Javascript).",
     "proof-r1": "Un piccolo script VueJS consente di passare dall'italiano all'inglese (uso un plugin ispirato a gettext).",
     "proof-r2": "Tutte le icone arrivano dalla libreria gratuita di Fontawesome, bandiere incluse. La mia photo non è ritagliata ma posizionata nel punto giusto da CSS.",
-    "proof-r3": "Infine, ho usato NodeJS per assemblare le librerie Javascript di terze parti. Github.io supporta però solo pagine statiche, quindi esportato tutto con <a href=\"https://github.com/brewingcode/pug-pack\">pug-pack</a>. Non cercate NodeJS tra le mie conoscenze, non l'ho mai usato prima.",
+    "proof-r3": "Infine, ho scritto un <a href=\"https://github.com/alienhunter3010/alienhunter3010.nodejs\">progetto NodeJS</a> per assemblare le librerie Javascript di terze parti. Github.io supporta però solo pagine statiche, quindi esportato tutto con <a href=\"https://github.com/brewingcode/pug-pack\">pug-pack</a>. Non cercate NodeJS tra le mie conoscenze, non l'ho mai usato prima."
   }
 }
