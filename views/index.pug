@@ -1,0 +1,191 @@
+extends layouts/layout
+
+block navigation
+  // Navigation
+  nav#sideNav.navbar.navbar-expand-lg.navbar-dark.bg-primary.fixed-top
+    a.navbar-brand.js-scroll-trigger(href='#page-top')
+      span.d-block.d-lg-none Alessio Cecchin
+      span.d-none.d-lg-block
+        img#myself.img-fluid.img-profile.rounded-circle.mx-auto.mb-2(src='assets/img/myself.png' alt="Alessio Cecchin's photo")
+    button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarResponsive.collapse.navbar-collapse
+      ul.navbar-nav
+        each section in src["structure.json"]["sections"]
+          li.nav-item
+            a.nav-link.js-scroll-trigger(title=section.title href=section.href v-translate) #{section.content}
+        li.nav-item
+          span.nav-link.js-scroll-trigger
+            ul.list-inline
+              li.list-inline-item
+                a(v-on:click="$language.current='it_IT'")
+                  span.fa-layers.fa-fw.fa-lg
+                    i.fas.fa-window-minimize.text-success(data-fa-transform='shrink-6 up-1.8 left-3 rotate-90')
+                    i.fas.fa-window-minimize.text-success(data-fa-transform='shrink-6 up-1.9 left-2 rotate-90')
+                    i.fas.fa-window-minimize.text-success(data-fa-transform='shrink-6 up-2 left-1 rotate-90')
+                    i.fas.fa-window-minimize.text-success(data-fa-transform='shrink-6 up-2 rotate-90')
+                    i.fas.fa-window-minimize.text-success(data-fa-transform='shrink-6 up-2 right-1 rotate-90')
+                    i.fas.fa-window-minimize.text-white(data-fa-transform='shrink-6 up-2 right-2 rotate-90')
+                    i.fas.fa-window-minimize.text-white(data-fa-transform='shrink-6 up-1.9 right-3 rotate-90')
+                    i.fas.fa-window-minimize.text-white(data-fa-transform='shrink-6 up-1.9 right-4 rotate-90')
+                    i.fas.fa-window-minimize.text-white(data-fa-transform='shrink-6 up-1.8 right-5 rotate-90')
+                    i.fas.fa-window-minimize.text-white(data-fa-transform='shrink-6 up-1.9 right-5.5 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.7 right-6.5 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.7 right-7.5 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.6 right-8.5 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.5 right-9.5 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.5 right-10.5 rotate-90')
+                    i.far.fa-flag.fa-stack-1x
+              li.list-inline-item
+                a(v-on:click="$language.current='en_GB'")
+                  span.fa-layers.fa-fw.fa-lg
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.8 left-3 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.9 left-2 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-2 left-1 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-2 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-2 right-1 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-2 right-2 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.9 right-3 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.9 right-4 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.8 right-5 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.9 right-5.5 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.7 right-6.5 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.7 right-7.5 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.6 right-8.5 rotate-90')
+                    i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.5 right-9.5 rotate-90')
+                    i.fas.fa-square.text-primary(data-fa-transform='shrink-8 up-6 left-4 rotate-90')
+                    i.fas.fa-flag-usa.fa-sm
+              li.list-inline-item
+                a(href="#proof-of-work")
+                  span.fa-layers.fa-fw.fa-lg
+                    i.fas.fa-cog.fa-sm.text-white
+
+block content
+  // Page Content
+  .container-fluid.p-0
+    // About
+    section#about.resume-section
+      .resume-section-content
+        h1.mb-0
+          | Alessio
+          span.text-primary Cecchin
+        .subheading.mb-5
+          | Via Luigi Capuana, 153 &middot; 00137 Roma, IT &middot;
+          span#safe-phone Enable Javascript to see my phone number
+          |  &middot;
+          a#safe-email(href='https://raspberrypi.org') weak protected email address. You need Javascript to load my address
+        each paragraph in src["structure.json"]["sections"][0]["rows"]
+          p.lead(v-translate) #{paragraph}
+        p.lead.mb-5
+        .social-icons
+          a.social-icon(href='https://github.com/alienhunter3010/')
+            i.fab.fa-github
+          a.social-icon(href='https://www.linkedin.com/in/alessio-cecchin-4270912b/')
+            i.fab.fa-linkedin-in
+    hr.m-0
+    // Experience
+    section#experience.resume-section
+      .resume-section-content
+        h2.mb-5(v-translate) #{src["structure.json"]["sections"][1]["content"]}
+        each item in src["structure.json"]["sections"][1]["elements"]
+          .d-flex.flex-column.flex-md-row.justify-content-between.mb-5
+            .flex-grow-1
+              h3.mb-0(v-translate) #{item.role}
+              .subheading.mb-3(v-translate) #{item.where}
+              each row in item["rows"]
+                p(v-translate) #{row}
+            .flex-shrink-0
+              span.text-primary(v-translate) #{item.period}
+    hr.m-0
+    // Education
+    section#education.resume-section
+      .resume-section-content
+        h2.mb-5(v-translate) #{src["structure.json"]["sections"][2]["content"]}
+        each item in src["structure.json"]["sections"][2]["elements"]
+          .d-flex.flex-column.flex-md-row.justify-content-between
+            .flex-grow-1
+              h3.mb-0(v-translate) #{item.where}
+              .subheading.mb-3(v-translate) #{item.target}
+            .flex-shrink-0
+              span.text-primary(v-translate) #{item.period}
+    hr.m-0
+    // Skills
+    section#skills.resume-section
+      .resume-section-content
+        h2(v-translate) #{src["structure.json"]["sections"][3]["content"]}
+        div.mb-5
+          i (&nbsp;
+          i.fas.fa-mouse
+          i(v-translate) #{src["structure.json"]["sections"][3]["hint"]}
+        .subheading.mb-3(v-translate) #{src["structure.json"]["sections"][3]["topics"][0]}
+        ul.list-inline.dev-icons
+          li.list-inline-item(title='java')
+            i.fab.fa-java
+          li.list-inline-item(title='Spring Boot')
+            span.fa-stack.my-stacked
+              i.fas.fa-circle.fa-stack-1x
+              i.fas.fa-leaf.fa-inverse.fa-stack-1x
+          li.list-inline-item(title='python')
+            i.fab.fa-python
+          li.list-inline-item(title='php')
+            i.fab.fa-php
+          li.list-inline-item(title='bash')
+            i.fas.fa-terminal
+          li.list-inline-item(title='SQL (MySQL dialect)')
+            i.fas.fa-database
+          li.list-inline-item(title='html5')
+            i.fab.fa-html5
+          li.list-inline-item(title='css3')
+            i.fab.fa-css3-alt
+          li.list-inline-item(title='javascript')
+            i.fab.fa-js-square
+        .subheading.mb-3(v-translate) #{src["structure.json"]["sections"][3]["topics"][1]}
+        ul.list-inline.dev-icons
+          li.list-inline-item(title='GNU/Linux')
+            i.fab.fa-linux
+          li.list-inline-item(title='Ubuntu')
+            i.fab.fa-ubuntu
+          li.list-inline-item(title='Raspberry Pi/Raspbian/Debian')
+            i.fab.fa-raspberry-pi
+          li.list-inline-item(title='IntelliJ IDEA')
+            i.fas.fa-code
+          li.list-inline-item(title='git')
+            i.fab.fa-git
+          li.list-inline-item(title='gitlab')
+            i.fab.fa-gitlab
+          li.list-inline-item(title='Google workspace')
+            i#google-tools.fab.fa-google
+          li.list-inline-item(title='Jira/Confluence')
+            i#atlassian-tools.fab.fa-jira
+        .subheading.mb-3(v-translate) #{src["structure.json"]["sections"][3]["topics"][2]}
+        ul.list-inline.dev-icons
+          li.list-inline-item(title='Italian: mother language')
+            span.fa-layers.fa-fw
+              i.fas.fa-window-minimize.text-success(data-fa-transform='shrink-6 up-1.8 left-3 rotate-90')
+              i.fas.fa-window-minimize.text-success(data-fa-transform='shrink-6 up-1.9 left-2 rotate-90')
+              i.fas.fa-window-minimize.text-success(data-fa-transform='shrink-6 up-2 left-1 rotate-90')
+              i.fas.fa-window-minimize.text-success(data-fa-transform='shrink-6 up-2 rotate-90')
+              i.fas.fa-window-minimize.text-success(data-fa-transform='shrink-6 up-2 right-1 rotate-90')
+              i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.7 right-6.5 rotate-90')
+              i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.7 right-7.5 rotate-90')
+              i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.6 right-8.5 rotate-90')
+              i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.5 right-9.5 rotate-90')
+              i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.5 right-10.5 rotate-90')
+              i.far.fa-flag.fa-stack-1x
+          li.list-inline-item(title='English: fluent')
+            i.fas.fa-flag-usa
+    hr.m-0
+    // Interests
+    section#interests.resume-section
+      .resume-section-content
+        h2.mb-5(v-translate) #{src["structure.json"]["sections"][4]["content"]}
+        each item in src["structure.json"]["sections"][4]["rows"]
+          p(v-translate) #{item}
+    
+    hr.m-0
+    // Proof of work
+    section#proof-of-work.resume-section
+      .resume-section-content
+        h2.mb-5(v-translate) #{src["structure.json"]["extra"]["content"]}
+        each item in src["structure.json"]["extra"]["rows"]
+          p(v-translate) #{item}

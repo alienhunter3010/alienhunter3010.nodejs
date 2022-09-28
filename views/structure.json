@@ -1,0 +1,95 @@
+{
+  "sections": [
+    {
+      "title": "whoami", "href": "#about", "content": "About",
+      "rows": [
+        "about-r0",
+        "about-r1",
+        "about-r2"
+      ]
+    },
+    {
+      "title": "uptime", "href": "#experience", "content": "Experience",
+      "elements": [
+        {
+          "where": "experience-0-where", "period": "experience-0-period", "role": "experience-0-role",
+          "rows": [
+            "experience-0-r0",
+            "experience-0-r1",
+            "experience-0-r2",
+            "experience-0-r3"
+          ]
+        },
+        {
+          "where": "experience-1-where", "period": "experience-1-period", "role": "experience-1-role",
+          "rows": [
+            "experience-1-r0",
+            "experience-1-r1"
+          ]
+        },
+        {
+          "where": "experience-2-where", "period": "experience-2-period", "role": "experience-2-role",
+          "rows": [
+            "experience-2-r0"
+          ]
+        },
+        {
+          "where": "experience-3-where", "period": "experience-3-period", "role": "experience-3-role",
+          "rows": [
+            "experience-3-r0",
+            "experience-3-r1"
+          ]
+        },
+        {
+          "where": "experience-4-where", "period": "experience-4-period", "role": "experience-4-role",
+          "rows": [
+            "experience-4-r0",
+            "experience-4-r1"
+          ]
+        },
+        {
+          "where": "experience-5-where", "period": "experience-5-period", "role": "experience-5-role",
+          "rows": [
+            "experience-5-r0"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "man", "href": "#education", "content": "Education",
+      "elements": [
+        {
+          "where": "education-0-where", "period": "education-0-period", "target": "education-0-target"
+        },
+        {
+          "where": "education-1-where", "period": "education-1-period", "target": "education-1-target"
+        }
+      ]
+    },
+    {
+      "title": "systemctrl status", "href": "#skills", "content": "Skills", "hint": "skills-hint",
+      "topics": [
+        "topic-0",
+        "topic-1",
+        "topic-2"
+      ]
+    },
+    {
+      "title": "cd ~", "href": "#interests", "content": "Interests",
+      "rows": [
+        "interests-r0",
+        "interests-r1",
+        "interests-r2"
+      ]
+    }
+  ],
+  "extra": {
+    "href": "#proof-of-work", "content": "Proof of work",
+    "rows": [
+      "proof-r0",
+      "proof-r1",
+      "proof-r2",
+      "proof-r3"
+    ]
+  }
+}
