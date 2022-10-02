@@ -17,8 +17,9 @@ html
     link(href='css/my-style.css' rel='stylesheet')
   body
     div#page
-      block navigation
-      block content
+      div(v-bind:class="{dark: isDark, day: !isDark}")
+        block navigation
+        block content
 
     // Bootstrap core JS
     script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js')

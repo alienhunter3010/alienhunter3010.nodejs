@@ -3,7 +3,8 @@ const path = require('path');
 const VueLoaderPlugin = require('vue-loader-plugin');
 
 const config = {
-    mode: 'production',
+//    mode: 'production',
+    mode: 'development',
     entry: {
         'home': './client/home.js',
     },

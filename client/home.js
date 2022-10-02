@@ -15,12 +15,22 @@ Vue.use(GetTextPlugin, {
       },
     },
   },
-  translations: translations,
+  translations: translations
 })
 
 let app = new Vue({
     el: '#page',
+    data: {
+      isDark: false
+    },
     mounted: function() {
       console.log(`the component is now mounted.`)
+    },
+    methods: {
+      toggleLight: function() {
+        this.isDark = !this.isDark;
+        document.getElementById("h24").setAttribute("data-icon",
+            this.isDark ? 'sun' : 'moon');
+      }
     }
 })

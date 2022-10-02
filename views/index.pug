@@ -53,16 +53,20 @@ block navigation
                     i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.7 right-7.5 rotate-90')
                     i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.6 right-8.5 rotate-90')
                     i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.5 right-9.5 rotate-90')
-                    i.fas.fa-square.text-primary(data-fa-transform='shrink-8 up-6 left-4 rotate-90')
+                    i.fas.fa-square.stars-inverse(data-fa-transform='shrink-10 up-5 left-4 rotate-90')
                     i.fas.fa-flag-usa.fa-sm
               li.list-inline-item
                 a(href="#proof-of-work")
                   span.fa-layers.fa-fw.fa-lg
                     i.fas.fa-cog.fa-sm.text-white
+              li.list-inline-item
+                a(v-on:click="toggleLight")
+                  span.fa-layers.fa-fw.fa-lg
+                    i#h24.fas.fa-moon.fa-sm.text-white
 
 block content
   // Page Content
-  .container-fluid.p-0
+  #page-top.container-fluid.p-0
     // About
     section#about.resume-section
       .resume-section-content
@@ -113,10 +117,10 @@ block content
     section#skills.resume-section
       .resume-section-content
         h2(v-translate) #{src["structure.json"]["sections"][3]["content"]}
-        div.mb-5
-          i (&nbsp;
+        div.mb-5.note
+          span (&nbsp;
           i.fas.fa-mouse
-          i(v-translate) #{src["structure.json"]["sections"][3]["hint"]}
+          span(v-translate) #{src["structure.json"]["sections"][3]["hint"]}
         .subheading.mb-3(v-translate) #{src["structure.json"]["sections"][3]["topics"][0]}
         ul.list-inline.dev-icons
           li.list-inline-item(title='java')
@@ -166,6 +170,11 @@ block content
               i.fas.fa-window-minimize.text-success(data-fa-transform='shrink-6 up-2 left-1 rotate-90')
               i.fas.fa-window-minimize.text-success(data-fa-transform='shrink-6 up-2 rotate-90')
               i.fas.fa-window-minimize.text-success(data-fa-transform='shrink-6 up-2 right-1 rotate-90')
+              i.fas.fa-window-minimize.text-white(data-fa-transform='shrink-6 up-2 right-2 rotate-90')
+              i.fas.fa-window-minimize.text-white(data-fa-transform='shrink-6 up-1.9 right-3 rotate-90')
+              i.fas.fa-window-minimize.text-white(data-fa-transform='shrink-6 up-1.9 right-4 rotate-90')
+              i.fas.fa-window-minimize.text-white(data-fa-transform='shrink-6 up-1.8 right-5 rotate-90')
+              i.fas.fa-window-minimize.text-white(data-fa-transform='shrink-6 up-1.9 right-5.5 rotate-90')
               i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.7 right-6.5 rotate-90')
               i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.7 right-7.5 rotate-90')
               i.fas.fa-window-minimize.text-danger(data-fa-transform='shrink-6 up-1.6 right-8.5 rotate-90')
